@@ -1,8 +1,18 @@
-import React from 'react';
+import './App.css';
+import { BrowserRouter, Routes, Route } from 'react-router-dom';
+
+import Input from './components/Input';
 
 function App() {
-  const value = 'World Is here';
-  return <div>Hello {value}</div>;
+  return (
+    <div className="App">
+      <BrowserRouter >
+      <Routes>
+        <Route path='/' element={<Input />}></Route>
+      </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;
